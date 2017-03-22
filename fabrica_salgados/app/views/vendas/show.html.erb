@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @venda.Cliente %>
+</p>
+
+<p>
+  <strong>Quantidade:</strong>
+  <%= @venda.quantidade %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @venda.valor %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @venda.data %>
+</p>
+
+<p>
+  <strong>Valor unitario:</strong>
+  <%= @venda.valor_unitario %>
+</p>
+
+<p>
+  <strong>Situacao:</strong>
+  <%= @venda.situacao %>
+</p>
+
+<p>
+  <strong>Produto:</strong>
+  <%= @venda.Produto %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_venda_path(@venda) %> |
+<%= link_to 'Back', vendas_path %>

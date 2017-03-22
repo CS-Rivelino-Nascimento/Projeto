@@ -1,0 +1,59 @@
+
+<%= form_for(venda) do |f| %>
+  <% if venda.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(venda.errors.count, "error") %> prohibited this venda from being saved:</h2>
+
+      <ul>
+      <% venda.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= @meu_nome%>
+
+
+  <div class="field">
+    <%= puts "Meus produtos #{@selecionar_cliente}"%>
+    <%= f.label :Cliente_id %>
+    <%= collection_select(:Venda, :Cliente_id, Cliente.all, :id, :nome) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Produto_id %>
+    <%= collection_select(:Venda, :Produto_id, @selecionar_produto, :id, :descricao) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :quantidade %>
+    <%= f.text_field :quantidade %>
+  </div>
+
+  <div class="field">
+    <%= f.label :valor %>
+    <%= f.text_field :valor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :data %>
+    <%= f.text_field :data %>
+  </div>
+
+  <div class="field">
+    <%= f.label :valor_unitario %>
+    <%= f.text_field :valor_unitario %>
+  </div>
+
+  <div class="field">
+    <%= f.label :situacao %>
+    <%= f.text_field :situacao %>
+  </div>
+
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

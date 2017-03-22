@@ -1,0 +1,27 @@
+<%= form_for(materia_prima) do |f| %>
+  <% if materia_prima.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(materia_prima.errors.count, "error") %> prohibited this materia_prima from being saved:</h2>
+
+      <ul>
+      <% materia_prima.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :valor %>
+    <%= f.text_field :valor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :descricao %>
+    <%= f.text_field :descricao %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

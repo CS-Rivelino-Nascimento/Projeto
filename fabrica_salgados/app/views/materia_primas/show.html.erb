@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @materia_prima.valor %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @materia_prima.descricao %>
+</p>
+
+<%= link_to 'Edit', edit_materia_prima_path(@materia_prima) %> |
+<%= link_to 'Back', materia_primas_path %>
