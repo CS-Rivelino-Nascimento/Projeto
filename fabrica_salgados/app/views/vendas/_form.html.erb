@@ -15,7 +15,6 @@
 
 
   <div class="field">
-    <%= puts "Meus produtos #{@selecionar_cliente}"%>
     <%= f.label :Cliente_id %>
     <%= collection_select(:Venda, :Cliente_id, Cliente.all, :id, :nome) %>
   </div>

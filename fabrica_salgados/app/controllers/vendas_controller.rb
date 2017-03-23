@@ -16,8 +16,8 @@ class VendasController < ApplicationController
   # GET /vendas/new
   def new
     @venda = Venda.new
-    @selecionar_cliente = Cliente.all
-    @selecionar_produto = Produto.all
+    @selecionar_cliente
+    @selecionar_produto 
   end
 
   # GET /vendas/1/edit
