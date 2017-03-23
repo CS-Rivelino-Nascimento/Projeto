@@ -16,14 +16,14 @@ class VendasController < ApplicationController
   # GET /vendas/new
   def new
     @venda = Venda.new
-    @selecionar_cliente
-    @selecionar_produto 
+    selecionar_cliente
+    selecionar_produto
   end
 
   # GET /vendas/1/edit
   def edit
-    @selecionar_cliente
-    @selecionar_produto
+    selecionar_cliente
+    selecionar_produto
   end
 
   # POST /vendas

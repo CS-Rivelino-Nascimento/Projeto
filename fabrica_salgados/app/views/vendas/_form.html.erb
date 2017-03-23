@@ -16,12 +16,12 @@
 
   <div class="field">
     <%= f.label :Cliente_id %>
-    <%= collection_select(:Venda, :Cliente_id, Cliente.all, :id, :nome) %>
+    <%= collection_select(:Venda, :Cliente_id, @clientes_para_selecionar, :id, :nome) %>
   </div>
 
   <div class="field">
     <%= f.label :Produto_id %>
-    <%= collection_select(:Venda, :Produto_id, @selecionar_produto, :id, :descricao) %>
+    <%= collection_select(:Venda, :Produto_id, @produtos_para_selecionar, :id, :descricao) %>
   </div>
 
   <div class="field">
